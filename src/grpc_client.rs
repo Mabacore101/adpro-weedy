@@ -3,6 +3,9 @@ use tokio::sync::mpsc;
 use tokio::sync::mpsc::{Receiver, Sender};
 use tokio_stream::wrappers::ReceiverStream;
 use tonic::transport::Channel;
+pub mod services {
+    tonic::include_proto!("services");
+}
 
 use services::{
     chat_service_client::ChatServiceClient, payment_service_client::PaymentServiceClient,
@@ -10,9 +13,6 @@ use services::{
     TransactionRequest,
 };
 
-pub mod services {
-    tonic::include_proto!("services");
-}
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
