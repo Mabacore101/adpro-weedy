@@ -3,12 +3,9 @@
 1. What are the key differences between unary, server streaming, and bi-directional streaming RPC (Remote Procedure Call) methods, and in what scenarios would each be most suitable?
 
 - The key differences between unary, server streaming, and bi-directional streaming RPC methods lie in the flow of communication and the number of messages exchanged between the client and server.
-
-a. **Unary RPC**: This method involves a single request from the client and a single response from the server. It's suitable for scenarios where a one-time request is needed, and a single piece of data is expected in return. 
-
-b. **Server Streaming RPC**: In this method, the client sends a single request to the server, but the server sends multiple responses over time. It's ideal for situations where the server needs to push a stream of data or updates to the client. 
-
-c. **Bi-directional Streaming RPC**: Here, both the client and the server can send multiple messages back and forth in real-time. It’s commonly used in applications requiring constant, interactive communication. 
+   a. **Unary RPC**: This method involves a single request from the client and a single response from the server. It's suitable for scenarios where a one-time request is needed, and a single piece of data is expected in return. 
+   b. **Server Streaming RPC**: In this method, the client sends a single request to the server, but the server sends multiple responses over time. It's ideal for situations where the server needs to push a stream of data or updates to the client. 
+   c. **Bi-directional Streaming RPC**: Here, both the client and the server can send multiple messages back and forth in real-time. It’s commonly used in applications requiring constant, interactive communication. 
 
 Each of these methods is designed to handle different communication needs, making them suitable for various real-time, one-time, or large data transfer scenarios.
 
